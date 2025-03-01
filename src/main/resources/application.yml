@@ -12,7 +12,7 @@ spring:
     show-sql: true
   data:
     redis:
-      host: cache-server
+      host: cache-server # docker compose에서 설정한 cache-server
       port: 6379
 
 logging:
@@ -28,3 +28,7 @@ spring:
     url: jdbc:mysql://redis-in-spring-db.cmhrx945hezb.ap-northeast-2.rds.amazonaws.com:3306/mydb
     username: admin
     password: password
+  data:
+    redis:
+      host: redis-in-spring-cache-server.nwvgum.ng.0001.apn2.cache.amazonaws.com
+      port: 6379
