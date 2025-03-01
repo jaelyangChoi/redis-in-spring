@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/mydb
     username: root
-    password:
+    password: choi
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -17,4 +17,14 @@ spring:
 
 logging:
   level:
-    org.springframework.cache: trace  # Redis ??? ?? ??? ????? ??
+    org.springframework.cache: trace  # Redis 캐싱 로그
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:mysql://redis-in-spring-db.cmhrx945hezb.ap-northeast-2.rds.amazonaws.com:3306/mydb
+    username: amdin
+    password: password
