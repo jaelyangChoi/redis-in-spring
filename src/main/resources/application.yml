@@ -26,5 +26,5 @@ spring:
       on-profile: prod
   datasource:
     url: jdbc:mysql://redis-in-spring-db.cmhrx945hezb.ap-northeast-2.rds.amazonaws.com:3306/mydb
-    username: amdin
+    username: admin
     password: password
